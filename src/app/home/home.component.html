@@ -1,15 +1,7 @@
 <div class="container" *ngIf="status || !isEmpty">
-    <!-- <div class="container-fluid" style="display: flex;">
-        <div class="container-fluid row">
-            <div style="margin: 10px;;" class="card" *ngFor="let img of imgs" style="width: 18rem;">
-                <img class="card-img-top" [src]="img.url" [alt]="img.name">
-                
-            </div>
-        </div>
-    </div> -->
     <div>
         <div class="grid-image">
-            <div style="margin: 10px;;" *ngFor="let img of imgs">
+            <div style="margin: 5px;;" *ngFor="let img of imgs">
                 <img style="cursor: pointer;" [routerLink]="['/show', img.id]" class="card-img-top" [src]="img.url"
                     [alt]="img.name">
             </div>
