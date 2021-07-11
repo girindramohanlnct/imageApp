@@ -1,0 +1,28 @@
+.card {
+    margin-top: 10px;
+    /* margin-left: 100px */
+    justify-content: space-between;
+}
+
+.grid-image {
+    display: grid;
+    margin-top: 10px;
+    
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+}
+img {
+cursor: pointer;
+}
+
+@media (max-width:480px) {
+    .grid-image {
+        grid-template-columns: auto;
+    }
+}
+
+/* @media (min-width:961px) {
+    .grid-image {
+        grid-template-columns: auto;
+    }
+} */

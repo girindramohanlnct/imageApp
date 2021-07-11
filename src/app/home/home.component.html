@@ -1,0 +1,24 @@
+<div class="container" *ngIf="status || !isEmpty">
+    <!-- <div class="container-fluid" style="display: flex;">
+        <div class="container-fluid row">
+            <div style="margin: 10px;;" class="card" *ngFor="let img of imgs" style="width: 18rem;">
+                <img class="card-img-top" [src]="img.url" [alt]="img.name">
+                
+            </div>
+        </div>
+    </div> -->
+    <div>
+        <div class="grid-image">
+            <div style="margin: 10px;;" *ngFor="let img of imgs">
+                <img style="cursor: pointer;" [routerLink]="['/show', img.id]" class="card-img-top" [src]="img.url"
+                    [alt]="img.name">
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!status">
+        <P>No Images yet!!!!!!!!!!!...........</P>
+    </div>
+    <div class="container" *ngIf="isEmpty">
+        <h1>No Images yet you need to add....... to add please <span [routerLink]="['/new']">click here</span></h1>
+    </div>
+    <!-- <button type="button" class="btn btn-primary">Button</button> -->
